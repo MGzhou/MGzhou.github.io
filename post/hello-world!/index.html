@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Hello World! | MGzhou的博客</title>
-<link rel="shortcut icon" href="https://MGzhou.github.io/favicon.ico?v=1631520886796">
+<link rel="shortcut icon" href="https://MGzhou.github.io/favicon.ico?v=1631521798676">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://MGzhou.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Hello World! | MGzhou的博客 - Atom Feed" href="https://MGzhou.github.io/atom.xml">
@@ -22,7 +22,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://MGzhou.github.io">
-  <img class="avatar" src="https://MGzhou.github.io/images/avatar.png?v=1631520886796" alt="">
+  <img class="avatar" src="https://MGzhou.github.io/images/avatar.png?v=1631521798676" alt="">
   </a>
   <h1 class="site-title">
     MGzhou的博客
@@ -103,6 +103,32 @@
 
         
 
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'fdc332e1bbd4dfb57789',
+    clientSecret: '3170264f2172343a335a912f147fff57f7505928 ',
+    repo: 'mgzhou.github.io/',
+    owner: 'mgzhou',
+    admin: ['mgzhou'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
         
 
         <div class="site-footer">
