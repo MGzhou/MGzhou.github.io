@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://MGzhou.github.io</id>
     <title>MGzhou的博客</title>
-    <updated>2021-09-14T04:03:41.588Z</updated>
+    <updated>2021-09-14T04:03:48.402Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://MGzhou.github.io"/>
     <link rel="self" href="https://MGzhou.github.io/atom.xml"/>
@@ -10,6 +10,30 @@
     <logo>https://MGzhou.github.io/images/avatar.png</logo>
     <icon>https://MGzhou.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, MGzhou的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[Gridea 配置Gitalk 的异常：Error: Bad credentials 和 Error: Not Found.]]></title>
+        <id>https://MGzhou.github.io/post/gridea-pei-zhi-gitalk-de-yi-chang-error-bad-credentials-he-error-not-found/</id>
+        <link href="https://MGzhou.github.io/post/gridea-pei-zhi-gitalk-de-yi-chang-error-bad-credentials-he-error-not-found/">
+        </link>
+        <updated>2021-09-14T03:32:50.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="gridea-配置gitalk-的异常error-bad-credentials-和-error-not-found">Gridea 配置Gitalk 的异常：Error: Bad credentials 和 Error: Not Found.</h1>
+<h2 id="1-error-bad-credentials">1. Error: Bad credentials</h2>
+<p>这个是因为我注册【Github的个人设置-Develop settings中的OAuth Apps】有错。</p>
+<p>错误是我的Github账户名称有大写，但我在Authorization callback URL和Homepage URL 都按小写填了。当我把对应小写改回大写，就没有异常了。</p>
+<blockquote>
+<p>例如我的账户名称是<code>ABCaaaaa</code> 但我看到我的个人博客链接是小写的，于是我把 Authorization callback URL 填了 <code>https://abcaaaaa.github.io</code></p>
+<p>这就导致了错误，因为<code>Authorization callback URL</code> 需要的是仓库地址或个人域名，所有填小写的话，<code>github</code> 就不能检索到仓库地址了。</p>
+<p>要把<code>https://abcaaaaa.github.io</code> 改为<code>https://ABCaaaaa.github.io</code></p>
+</blockquote>
+<h2 id="2-error-not-found">2. Error: Not Found</h2>
+<p>我是把<code>Authorization callback URL</code> 的地址放在仓库名称属性上了，所以弹出异常。</p>
+<p>把链接的<code>https://</code> 去掉，留下仓库名称即可。</p>
+<p><mark>改完之后要保存配置再同步</mark></p>
+<p><mark>改完之后要保存配置再同步</mark></p>
+<p><mark>改完之后要保存配置再同步</mark></p>
+<figure data-type="image" tabindex="1"><img src="https://gitee.com/MGzhou/zhoupic/raw/master/img/image-20210914112857755.png" alt="image-20210914112857755" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello World!]]></title>
         <id>https://MGzhou.github.io/post/hello-world!/</id>
