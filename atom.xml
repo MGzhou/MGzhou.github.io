@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://MGzhou.github.io</id>
     <title>MGzhou的博客</title>
-    <updated>2021-09-14T07:10:47.727Z</updated>
+    <updated>2021-09-28T04:00:16.582Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://MGzhou.github.io"/>
     <link rel="self" href="https://MGzhou.github.io/atom.xml"/>
@@ -10,6 +10,78 @@
     <logo>https://MGzhou.github.io/images/avatar.png</logo>
     <icon>https://MGzhou.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, MGzhou的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[python os模块]]></title>
+        <id>https://MGzhou.github.io/post/python-os-mo-kuai/</id>
+        <link href="https://MGzhou.github.io/post/python-os-mo-kuai/">
+        </link>
+        <updated>2021-09-28T03:57:13.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>python os模块 对文件夹、文件（文件操作函数）</strong></p>
+<pre><code class="language-python">os.getcwd()  #返回当前工作路径
+
+os.path.isabs()  #判断是否是绝对路径
+
+os.path.isfile()  #检验给出的路径是否是一个文件
+
+os.path.isdir()  #检验给出的路径是否是一个目录
+
+os.sep  #文件的路径分隔符 如:在windows上是 '\'  而在Linux上是 '/'
+
+os.walk()  #文件遍历
+ 如:def file_name(file_dir):
+    for root, dirs, files in os.walk(file_dir):
+        print('root_dir:', root)  # 当前目录路径
+        print('sub_dirs:', dirs)  # 当前路径下所有子目录
+        print('files:', files)  # 当前路径下所有非目录子文件
+        
+    file_name('E:/vmware')
+ 
+
+os.path.splitext()  #分离扩展名
+
+os.system()  #运行shell命令:
+
+os.path.exists()  #检验给出的路径是否真地存:
+
+os.getenv() 与os.putenv()  #读取和设置环境变量
+
+os.linesep  #给出当前平台使用的行终止符	如: windowss使用'\r\n'  ,Linux使用'\n'而Mac使用'\r'
+
+os.name #指示你正在使用的平台：	如:对于Windows，它是'nt'，而对于Linux/Unix用户，它是'posix'
+
+os.chmod（file） #修改文件权限与时间戳
+
+os.exit()  #终止当前进程 
+
+os.remove()  #删除文件 或空文件夹
+
+os.stat() #获取文件属性
+</code></pre>
+<p>目录操作：</p>
+<pre><code class="language-python">os.makedirs(&quot;file1/file2/file3&quot;) 	 #创建文件夹目录. 创建多级目录
+os.mkdir(&quot;file&quot;)    # 创建文件夹. 但是上级目录必须存在
+
+os.copy(&quot;oldfile&quot;,&quot;newfile&quot;)   #oldfile只能是文件夹，newfile可以是文件，也可以是目标目录
+
+os.rename(&quot;oldname&quot;,&quot;newname&quot;)   #重命名文件（目录）    文件或目录都是使用这条命令
+
+os.removedirs()   # 删除多级目录, 要求必须是空的
+os.rmdir(&quot;dir&quot;)	#只能删除空目录  
+
+os.listdir()  #返回指定目录下的所有文件和目录名
+
+os.path.split(path)  #返回一个路径的目录名和文件名   
+os.path.dirname()  #获取路径名
+os.path.basename() #获取文件名
+
+os.path.getsize（filename） #获取文件大小
+
+os.chdir(&quot;path&quot;)   换路径
+
+
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Gridea 配置Gitalk 的异常：Error: Bad credentials 和 Error: Not Found.]]></title>
         <id>https://MGzhou.github.io/post/gridea-pei-zhi-gitalk-de-yi-chang-error-bad-credentials-he-error-not-found/</id>
